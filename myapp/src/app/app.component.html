@@ -28,6 +28,23 @@
         >
           &nbsp;
         </div>
+        <!-- <i
+          class="fa fa-bed"
+          [tooltip]="popTemplate"
+          placement="top"
+          [ngClass]="{
+            'seat-item': true,
+            'seat-available': seatobj.status == 'available',
+            'seat-booked': seatobj.status == 'booked',
+            'seat-unavailable': seatobj.status == 'unavailable'
+          }"
+          (click)="selectSeat(seatobj)"
+          *ngIf="
+            (seatobj.status == 'available' || seatobj.status == 'booked') &&
+            seatobj.seatLabel != ''
+          "
+          >{{ seatobj.seatNo }}</i
+        > -->
         <div
           [tooltip]="popTemplate"
           placement="top"

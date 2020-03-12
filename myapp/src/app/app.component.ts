@@ -104,25 +104,26 @@ export class AppComponent {
             };
 
             if (item != "_") {
-              seatObj["seatLabel"] =
-                map_element.seat_label +
-                " " +
-                map_data[__counter].building_name +
-                seatNoCounter;
-              console.log(seatObj);
-
               if (seatNoCounter < 10) {
                 seatObj["seatNo"] =
                   map_data[__counter].building_name +
                   map_element.floor +
                   "0" +
                   seatNoCounter;
+
+                seatObj["seatLabel"] =
+                  map_element.seat_label + " " + seatObj["seatNo"];
+                console.log(seatObj["seatLabel"]);
               } else {
                 seatObj["seatNo"] =
                   "" +
                   map_data[__counter].building_name +
                   map_element.floor +
                   seatNoCounter;
+
+                seatObj["seatLabel"] =
+                  map_element.seat_label + " " + seatObj["seatNo"];
+                console.log(seatObj["seatLabel"]);
               }
               console.log(seatObj);
 
